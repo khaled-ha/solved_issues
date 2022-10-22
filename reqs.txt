@@ -1,0 +1,4 @@
+pytest
+pandas
+ipdb
+pytest-lazy-fixture
