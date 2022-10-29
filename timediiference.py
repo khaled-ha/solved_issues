@@ -1,11 +1,3 @@
-#!/bin/python3
-
-import math
-import os
-import random
-import re
-import sys
-import time
 from datetime import datetime
 
 # Complete the time_delta function below.
