@@ -26,8 +26,9 @@ def time_delta(t1, t2):
     
 
 if __name__ == '__main__':
-    t = int(input())
-    for t_itr in range(t):
-        t1 = input()
-        t2 = input()
-        delta = time_delta(t1, t2)
+    t0 = 'Sun 10 May 2015 13:54:36 -0700'
+    t1 = 'Sun 10 May 2015 13:54:36 -0000'
+    #Sat 02 May 2015 19:54:36 +0530
+    #Fri 01 May 2015 13:54:36 -0000
+    delta = time_delta(t1, t0)
+    expected = (25200 , 88200)
