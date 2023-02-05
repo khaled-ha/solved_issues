@@ -1,0 +1,1 @@
+logfile.txt - WARNING - remove file test.txt
