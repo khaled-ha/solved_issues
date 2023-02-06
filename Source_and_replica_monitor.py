@@ -20,7 +20,7 @@ args = parser.parse_args()
 
 if args.LogFile:
     print("Displaying LogFile as: % s" % args.LogFile)
-    logging.basicConfig(filename=args.LogFile, filemode='w', format='%(name)s - %(levelname)s - %(message)s')
+    logging.basicConfig(filename=args.LogFile, filemode='w', format='%(name)s - %(levelname)s - %(message)s - %(asctime)s', datefmt='%d-%b-%y %H:%M:%S')
     logger = logging.getLogger(args.LogFile)
 else:
     logger = logging.getLogger(__name__)
