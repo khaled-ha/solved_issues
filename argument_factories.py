@@ -4,6 +4,8 @@ from random import randint
 from dataclasses import dataclass
 from pydantic import BaseModel, Field
 
+
+# default argument are interpreted at compiling time 
 def defaut_args_list(data: list = []):
     data.append(1)
     return data
@@ -14,9 +16,9 @@ def defautl_arg_dict(data: dict = {}):
 
 
 class DefaultValues(BaseModel):
-    a :list = []
-    b: datetime = datetime.now()
-    c: datetime = Field(default_factory= lambda: datetime.now())
+    a :list = [] # pydantic handle this automaticly by making a deep copy of [] and it's not the same case of dataclass
+    b: datetime = datetime.now() # in this case is interpreted at compiling time so in all instances it's gonna be the same value
+    c: datetime = Field(default_factory= lambda: datetime.now()) # that's the best practice to do not 
 
 
 if __name__ == '__main__':
