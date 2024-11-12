@@ -8,7 +8,8 @@ from pydantic import BaseModel, Field
 # default argument are interpreted at compiling time 
 def defaut_args_list(data: list = []):
     data.append(1)
-    return data
+    print(data)
+    # return data
 
 def defautl_arg_dict(data: dict = {}):
     data[randint(1, 1000)] = randint(1, 1000)
@@ -25,10 +26,10 @@ class DefaultValues(BaseModel):
 
 if __name__ == '__main__':
     print('testing default list argument')
-    l = defaut_args_list()
-    print(l)
-    l = defaut_args_list()
-    print(l)
+    defaut_args_list()
+    # print(l)
+    defaut_args_list()
+    # print(l)
 
     print('testing default list dict')
     d = defautl_arg_dict()
